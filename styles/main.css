@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* general layout */
+html {
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background-color: #ececec;
+  padding: 10vh 10vw;
+}
+
+[data-js-fetched] {
+  width: max-content;
+  min-width: 650px;
+  height: 80vh;
+  background-color: white;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0px 1px 10px -5px;
+  overflow: scroll;
+}
+.hidden {
+  display: none !important;
+}
+/* Track */
+::-webkit-scrollbar {
+  width: 0;
+}
+/* Student card */
+.student {
+  padding: 30px;
+  border-bottom: 2px solid #ececec;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+/* Student imgage */
+.student-image {
+  border-radius: 50%;
+  border: 1px solid #ececec;
+  overflow: hidden;
+}
+.student-image img {
+  width: 120px;
+  transform: translateY(5px);
+}
+/* Student info */
+.details {
+  margin-left: 30px;
+}
+.details li {
+  list-style: none;
+}
+.details span {
+  font-weight: 700;
+  font-size: 2em;
+}
+.details span + ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+/* Student Button */
+button {
+  width: 36px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  border: none;
+  background: white;
+}
+
+button > div {
+  height: 36px;
+  width: 8px;
+  background-color: #d6d6d6;
+  border-radius: 3px;
+  margin-left: 14px;
+}
+
+button > div::before {
+  content: "";
+  width: 36px;
+  height: 8px;
+  background-color: #d6d6d6;
+  border-radius: 3px;
+  position: absolute;
+  top: 13px;
+  right: 0;
+}
+
+button:hover,
+button:hover > div,
+button:hover > div::before {
+  cursor: pointer;
+}
+button:hover > div,
+button:hover > div::before {
+  background-color: black;
+}
+
+.no-vertical {
+  width: 0;
+}
+
+/* filter input */
+form input {
+  width: 90%;
+  height: 30px;
+  border: none;
+  border-bottom: 2px solid #d6d6d6;
+}
+form input:focus {
+  border: 2px solid white;
+  border-bottom: 2px solid;
+  outline: none;
+}
+
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* tags */
+[data-js-tags] {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.tag {
+  background-color: #e6e6e6;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 5px;
+  display: inline-block;
+}
+.tag + .tag {
+  margin-left: 5px;
+}
